@@ -1,23 +1,40 @@
 import React from 'react';
-import { View, Text, ScrollView } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import Estilos from '../styles/Estilos';
 
 export default function Sobre() {
   return (
-    <ScrollView style={Estilos.scrollViewContainer}>
-      <View>
-        <Text style={Estilos.sobreTitulo}>Patinhas Felizes</Text>
-        <Text style={Estilos.sobreSubtitulo}>Bem-vindo(a) à central de cuidado do seu melhor amigo!</Text>
-      </View>
+    <ScrollView 
+      style={Estilos.scrollViewContainer} 
+      contentContainerStyle={Estilos.scrollViewContent} 
+      showsVerticalScrollIndicator={false}
+    >
+      <View style={Estilos.centerContent}>
 
-      <View>
-        <Text style={Estilos.sobreTexto}>
-          Com nosso aplicativo, você nunca mais vai esquecer de dar aquele remédio importante ou perder o dia da vacina. Crie o perfil do seu pet agora e tenha total controle de horários, datas, consultas e todas as tarefas diárias em um só lugar.
-        </Text>
-      </View>
+        <View style={Estilos.header}>
+          <MaterialCommunityIcons name="paw" size={48} color="#FF6F61" />
+          <Text style={Estilos.headerTitle}>Patinhas Felizes</Text>
+        </View>
 
-      <View>
-        <Text style={Estilos.sobreRodape}>Acesse a galeria de imagens aqui!</Text>
+        <View style={Estilos.card}>
+          <Text style={Estilos.cardTitle}>Bem-vindo(a)!</Text>
+          <Text style={Estilos.cardText}>
+            Aqui, você encontra tudo para cuidar do seu pet com amor e organização.
+          </Text>
+        </View>
+
+        <View style={Estilos.card}>
+          <Text style={Estilos.cardTitle}>Por que usar nosso app?</Text>
+          <Text style={Estilos.cardText}>
+            Nunca mais perca um remédio, uma consulta ou a data da vacina. Crie perfis, receba lembretes e tenha tudo no controle.
+          </Text>
+        </View>
+
+        <TouchableOpacity style={Estilos.button}>
+          <Text style={Estilos.buttonText}>Acesse a galeria de imagens aqui!</Text>
+        </TouchableOpacity>
+
       </View>
     </ScrollView>
   );

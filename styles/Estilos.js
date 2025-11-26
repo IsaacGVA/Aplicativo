@@ -1,63 +1,109 @@
 import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
-  pessoaItemContainer: {
-    backgroundColor: '#f2f2f2',
-    padding: 12,
-    borderRadius: 8,
-    marginVertical: 6,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-  pessoaItemNome: { fontSize: 16, fontWeight: 'bold' },
-  pessoaItemEmail: { color: '#555' },
-  pessoaItemBtnExcluirText: { color: 'red', fontWeight: 'bold' },
-  safeAreaViewContainer: { flex: 1, backgroundColor: '#fff', padding: 20 },
-  textoTitulo: { fontSize: 24, fontWeight: 'bold', marginBottom: 20 },
-  camposCadastroContainer: { marginBottom: 20 },
-  campoTexto: {
-    borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 8,
-    padding: 10,
-    marginBottom: 10
-  },
-  scrollViewContainer: {
-    flex: 1,
-    backgroundColor: '#FFF8F0',  // Fundo claro creme, acolhedor
-    padding: 20,
+  safeAreaViewContainer: {
+    flex: 1,               // número, não string
+    backgroundColor: '#FFF8F0', // combina com sua tela Sobre
   },
 
-  // NOVOS ESTILOS para Sobre
-  sobreTitulo: {
-    fontSize: 28,
+  scrollViewContainer: {
+    flex: 1,
+    backgroundColor: '#FFF8F0',
+  },
+  scrollViewContent: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+    paddingBottom: 40,
+  },
+  centerContent: {
+    width: '100%',
+    alignItems: 'center',
+  },
+
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 30,
+    justifyContent: 'center',
+  },
+  headerTitle: {
+    fontSize: 32,
     fontWeight: 'bold',
-    color: '#FF6F61',  // cor quente, amigável (um laranja suave)
-    marginBottom: 10,
-    textAlign: 'center',
-    fontFamily: 'sans-serif-medium',
-  },
-  sobreSubtitulo: {
-    fontSize: 18,
-    color: '#4B4B4B',
-    marginBottom: 20,
-    textAlign: 'center',
-    paddingHorizontal: 10,
-    fontFamily: 'sans-serif',
-  },
-  sobreTexto: {
-    fontSize: 16,
-    color: '#6A6A6A',
-    lineHeight: 24,
-    marginBottom: 25,
-    textAlign: 'justify',
-    fontFamily: 'sans-serif',
-  },
-  sobreRodape: {
-    fontSize: 16,
     color: '#FF6F61',
-    fontWeight: 'bold',
+    marginLeft: 12,
+    fontFamily: 'Helvetica',
+  },
+
+  card: {
+    backgroundColor: '#FFF',
+    borderRadius: 16,
+    padding: 20,
+    marginBottom: 20,
+    width: '90%',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.15,
+    shadowRadius: 12,
+    elevation: 5,
+    alignItems: 'center',
+  },
+  cardTitle: {
+    fontSize: 20,
+    fontWeight: '700',
+    marginBottom: 12,
+    color: '#333',
+    fontFamily: 'Helvetica',
+    textAlign: 'center',
+  },
+  cardText: {
+    fontSize: 16,
+    lineHeight: 24,
+    color: '#555',
+    fontFamily: 'Helvetica',
+    textAlign: 'center',
+  },
+
+  button: {
+    backgroundColor: '#FF6F61',
+    borderRadius: 30,
+    paddingVertical: 16,
+    paddingHorizontal: 24,
+    alignItems: 'center',
+    marginTop: 10,
+    shadowColor: '#FF6F61',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.4,
+    shadowRadius: 12,
+    elevation: 7,
+    width: '80%',
+  },
+  buttonText: {
+    fontSize: 18,
+    color: '#FFF',
+    fontWeight: '700',
+    fontFamily: 'Helvetica',
     textAlign: 'center',
   },
 });
+
+export const drawerStyles = {
+  headerStyle: {
+    backgroundColor: '#495057',
+  },
+  headerTintColor: '#fff',
+  headerTitleStyle: {
+    fontWeight: 'bold',
+  },
+  drawerStyle: {
+    backgroundColor: '#222',
+  },
+  drawerActiveTintColor: '#fff',
+  drawerInactiveTintColor: '#aaa',
+  drawerLabelStyle: {
+    color: '#0f0',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+};
