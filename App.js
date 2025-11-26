@@ -8,7 +8,6 @@ export default function App() {
 
   return (
     <View style={{ flex: 1, paddingTop: 40 }}>
-      {/* Menu lateral fake */}
       <View style={{ flexDirection: 'row', justifyContent: 'space-around', backgroundColor: '#eee', padding: 10 }}>
         <TouchableOpacity onPress={() => setTela('Sobre')}>
           <Text style={{ fontWeight: tela === 'Sobre' ? 'bold' : 'normal' }}>Sobre</Text>
