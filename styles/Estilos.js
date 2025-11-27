@@ -70,7 +70,7 @@ export default StyleSheet.create({
     borderRadius: 30,
     paddingVertical: 16,
     paddingHorizontal: 24,
-    alignItems: 'center',
+    alignSelf: 'center',
     marginTop: 10,
     shadowColor: '#FF6F61',
     shadowOffset: { width: 0, height: 6 },
@@ -292,3 +292,40 @@ export const drawerStyles = {
     fontWeight: 'bold',
   },
 };
+
+const styles = StyleSheet.create({
+  tabContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    backgroundColor: '#f2f2f2',
+    paddingVertical: 12,
+    borderRadius: 10,
+    marginHorizontal: 20,
+    marginBottom: 10,
+    elevation: 3, // Sombra no Android
+    shadowColor: '#000', // Sombra no iOS
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+    shadowOffset: { width: 0, height: 2 },
+  },
+
+  tabButton: {
+    paddingVertical: 8,
+    paddingHorizontal: 18,
+    borderRadius: 20,
+  },
+
+  tabButtonAtiva: {
+    backgroundColor: '#4A90E2',
+  },
+
+  tabText: {
+    fontSize: 16,
+    color: '#555',
+  },
+
+  tabTextAtiva: {
+    color: '#fff',
+    fontWeight: 'bold',
+  },
+});
